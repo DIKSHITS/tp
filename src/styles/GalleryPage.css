@@ -1,0 +1,279 @@
+.gallery-page {
+  background: #faf7f2;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.gallery-banner {
+  background: linear-gradient(
+    135deg,
+    #4b0000,
+    #700808,
+    #4b0000
+  );
+
+  padding: 120px 20px 80px;
+  text-align: center;
+  border-bottom: 3px solid #d4af37;
+}
+
+.gallery-banner-content h1 {
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.gallery-banner-content p {
+  color: #f3d39b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.gallery-section {
+  max-width: 1500px;
+  margin: auto;
+  padding: 70px 5%;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.gallery-tabs button {
+  border: 1px solid #ead9b8;
+  background: white;
+  color: #6b2020;
+
+  padding: 12px 28px;
+  border-radius: 30px;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.gallery-tabs button:hover,
+.gallery-tabs button.active {
+  background: #7b0909;
+  color: white;
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.gallery-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: white;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 260px;
+
+  object-fit: cover;
+  display: block;
+
+  transition: 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width: 1600px) {
+  .gallery-section {
+    max-width: 1800px;
+  }
+
+  .gallery-grid {
+    gap: 30px;
+  }
+
+  .gallery-card img {
+    height: 320px;
+  }
+
+  .gallery-tabs button {
+    font-size: 16px;
+    padding: 14px 35px;
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (max-width: 1400px) {
+  .gallery-grid {
+    gap: 20px;
+  }
+
+  .gallery-card img {
+    height: 240px;
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-card img {
+    height: 230px;
+  }
+}
+
+/* =========================
+   TABLET LANDSCAPE
+========================= */
+
+@media (max-width: 992px) {
+  .gallery-banner {
+    padding: 100px 20px 70px;
+  }
+
+  .gallery-section {
+    padding: 60px 4%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .gallery-banner {
+    padding: 90px 15px 60px;
+  }
+
+  .gallery-banner-content p {
+    font-size: 14px;
+  }
+
+  .gallery-section {
+    padding: 50px 20px;
+  }
+
+  .gallery-tabs {
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  .gallery-tabs button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card img {
+    height: 260px;
+  }
+
+  .gallery-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-tabs button {
+    width: 100%;
+  }
+
+  .gallery-section {
+    padding: 40px 15px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 375px) {
+  .gallery-banner {
+    padding: 80px 12px 50px;
+  }
+
+  .gallery-banner-content h1 {
+    font-size: 28px;
+  }
+
+  .gallery-banner-content p {
+    font-size: 13px;
+  }
+
+  .gallery-tabs button {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+
+  .gallery-card {
+    border-radius: 14px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+}

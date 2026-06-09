@@ -37,7 +37,7 @@ function AboutPage() {
 
         {/* Left Image */}
         <div className="about-image">
-          <img src={templeImg} alt="श्री शनिचर बाबा मंदिर" />
+          <img src={templeImg} alt="श्री सनिचर बाबा मंदिर" />
         </div>
 
         {/* Right Content */}
@@ -52,7 +52,7 @@ function AboutPage() {
           <div className="gold-divider"></div>
 
           <p className="main-desc">
-            श्री शनिचर बाबा मंदिर श्रद्धा, भक्ति एवं आध्यात्मिक ऊर्जा
+            श्री सनिचर बाबा मंदिर श्रद्धा, भक्ति एवं आध्यात्मिक ऊर्जा
             का पवित्र केंद्र है। यह मंदिर क्षेत्र के श्रद्धालुओं की
             आस्था का प्रमुख स्थान है। यहाँ प्रतिदिन भक्तगण दर्शन,
             पूजा-अर्चना एवं आरती में सम्मिलित होकर आध्यात्मिक शांति

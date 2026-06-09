@@ -13,12 +13,10 @@ import {
 function Footer() {
   return (
     <footer className="footer">
-
       <div className="footer-container">
 
         {/* Temple Info */}
         <div className="footer-col">
-
           <div className="footer-logo">
             <Landmark size={35} />
             <h2>श्री शनि महाराज मंदिर</h2>
@@ -31,63 +29,50 @@ function Footer() {
           </p>
 
           <div className="social-icons">
-
-            <a href="/">
+            <a href="/" aria-label="Facebook">
               <FaFacebookF />
             </a>
 
-            <a href="/">
+            <a href="/" aria-label="Instagram">
               <FaInstagram />
             </a>
 
-            <a href="/">
+            <a href="/" aria-label="YouTube">
               <FaYoutube />
             </a>
 
-            <a href="/">
+            <a href="/" aria-label="WhatsApp">
               <FaWhatsapp />
             </a>
-
           </div>
-
-        </div>
-
-        {/* Quick Links */}
-        <div className="footer-col">
-
-          <h3>त्वरित लिंक</h3>
-
-          <ul>
-            <li>होम</li>
-            <li>हमारे बारे में</li>
-            <li>दर्शन एवं आरती</li>
-            <li>कार्यक्रम</li>
-            <li>गैलरी</li>
-            <li>दान करें</li>
-            <li>संपर्क करें</li>
-          </ul>
-
         </div>
 
         {/* Temple Timing */}
         <div className="footer-col">
-
           <h3>मंदिर समय</h3>
 
-          <p>प्रातः 4:30 बजे - दोपहर 1:00 बजे</p>
-          <p>सायं 4:00 बजे - रात्रि 9:00 बजे</p>
+          <p>
+            <strong>प्रातः:</strong> 4:30 बजे - दोपहर 1:00 बजे
+          </p>
+
+          <p>
+            <strong>सायं:</strong> 4:00 बजे - रात्रि 9:00 बजे
+          </p>
 
           <h4>आरती समय</h4>
 
-          <p>मंगल आरती : प्रातः 4:30 बजे</p>
-          <p>संध्या आरती : सायं 7:00 बजे</p>
+          <p>
+            <strong>मंगल आरती:</strong> प्रातः 4:30 बजे
+          </p>
 
+          <p>
+            <strong>संध्या आरती:</strong> सायं 7:00 बजे
+          </p>
         </div>
 
       </div>
 
       <div className="footer-bottom">
-
         <p>
           © 2025 श्री शनि महाराज मंदिर | सर्वाधिकार सुरक्षित
         </p>
@@ -95,9 +80,7 @@ function Footer() {
         <span>
           ॥ जय श्री शनि देव ॥
         </span>
-
       </div>
-
     </footer>
   );
 }

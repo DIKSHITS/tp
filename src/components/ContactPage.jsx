@@ -39,7 +39,7 @@ function ContactPage() {
             </div>
             <div>
               <h4>Phone Number</h4>
-              <p>+91 9876543210</p>
+              <p>+91 7250011111</p>
             </div>
           </div>
 

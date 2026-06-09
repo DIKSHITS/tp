@@ -1,331 +1,222 @@
-.about-temple {
+.temple-about-section {
   background: #faf5ef;
-  padding: 90px 8%;
+  padding: 100px 8%;
   overflow-x: hidden;
 }
 
-.about-container {
+.temple-about-wrapper {
   max-width: 1400px;
   margin: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 70px;
 }
 
-/* =========================
-   IMAGE
-========================= */
+/* IMAGE */
 
-.about-image {
-  flex: 0 0 380px;
+.temple-about-image {
+  flex: 0 0 450px;
 }
 
-.about-image img {
+.temple-about-image img {
   width: 100%;
-  display: block;
+  height: 620px;
+  object-fit: cover;
   border-radius: 30px;
   border: 8px solid #f3e7d7;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
   transition: 0.4s ease;
 }
 
-.about-image img:hover {
-  transform: scale(1.02);
+.temple-about-image img:hover {
+  transform: scale(1.03);
 }
 
-/* =========================
-   CONTENT
-========================= */
+/* CONTENT */
 
-.about-content {
+.temple-about-content {
   flex: 1;
 }
 
-.about-content h2 {
+.temple-subtitle {
+  color: #c89b47;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.temple-about-content h2 {
   color: #5d1d1d;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: 48px;
+  margin-top: 10px;
   margin-bottom: 15px;
+  font-weight: 700;
   line-height: 1.2;
 }
 
-.title-divider {
+.temple-divider {
   color: #c89b47;
-  font-size: 28px;
-  margin-bottom: 30px;
+  font-size: 26px;
+  margin-bottom: 25px;
 }
 
-.about-text {
-  max-width: 600px;
+.temple-about-text {
   color: #555;
   line-height: 1.9;
   font-size: 18px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+  text-align: justify;
 }
 
-/* =========================
-   FEATURE GRID
-========================= */
+/* FEATURE GRID */
 
-.feature-grid {
+.temple-feature-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  gap: 25px;
 }
 
-.feature-card {
+.temple-feature-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 18px;
   text-align: center;
-  padding: 20px;
-  border-right: 1px solid #ead9c7;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
+.temple-feature-card:hover {
+  transform: translateY(-8px);
 }
 
-.feature-card:last-child {
-  border-right: none;
-}
-
-.feature-icon {
-  width: 90px;
-  height: 90px;
+.temple-feature-icon {
+  width: 85px;
+  height: 85px;
   margin: auto;
   margin-bottom: 20px;
   border-radius: 50%;
+  background: #fff7ec;
+  color: #c89b47;
+  border: 2px solid #f0dfcb;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  color: #c89b47;
-  border: 2px solid #f0dfcb;
 }
 
-.feature-card h3 {
+.temple-feature-card h3 {
   color: #6b2424;
-  font-size: 18px;
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
-.feature-card p {
+.temple-feature-card p {
   color: #666;
   line-height: 1.8;
   font-size: 15px;
 }
 
-/* =========================
-   BUTTON
-========================= */
+/* BUTTON */
 
-.read-more-btn {
-  margin-top: 50px;
+.temple-readmore-btn {
+  margin-top: 40px;
   background: linear-gradient(
     135deg,
     #6f0909,
-    #9c1111
+    #a31212
   );
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 10px;
-  padding: 14px 35px;
+  border-radius: 12px;
+  padding: 15px 35px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.read-more-btn:hover {
-  transform: translateY(-3px);
+.temple-readmore-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(111,9,9,0.25);
 }
 
-/* =========================
-   LARGE DESKTOP
-========================= */
-
-@media (min-width: 1600px) {
-  .about-container {
-    max-width: 1600px;
-    gap: 90px;
-  }
-
-  .about-image {
-    flex: 0 0 450px;
-  }
-
-  .about-content h2 {
-    font-size: 56px;
-  }
-
-  .about-text {
-    font-size: 20px;
-  }
-}
-
-/* =========================
-   LAPTOP
-========================= */
-
-@media (max-width: 1200px) {
-  .about-container {
-    gap: 50px;
-  }
-
-  .about-image {
-    flex: 0 0 340px;
-  }
-}
-
-/* =========================
-   TABLET LANDSCAPE
-========================= */
+/* TABLET */
 
 @media (max-width: 992px) {
-  .about-temple {
-    padding: 70px 5%;
-  }
 
-  .about-container {
+  .temple-about-wrapper {
     flex-direction: column;
-    text-align: center;
-    gap: 40px;
   }
 
-  .about-image {
-    flex: 1;
-    max-width: 500px;
+  .temple-about-image {
     width: 100%;
+    max-width: 600px;
+    margin: auto;
   }
 
-  .about-text {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+  .temple-about-image img {
+    height: auto;
   }
 
-  .feature-grid {
+  .temple-about-content {
+    text-align: center;
+  }
+
+  .temple-about-text {
+    text-align: center;
+  }
+
+  .temple-feature-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .feature-card {
-    border-right: none;
-    border-bottom: 1px solid #ead9c7;
-    padding-bottom: 25px;
   }
 }
 
-/* =========================
-   TABLET
-========================= */
+/* MOBILE */
 
 @media (max-width: 768px) {
-  .about-temple {
+
+  .temple-about-section {
     padding: 60px 20px;
   }
 
-  .about-content h2 {
+  .temple-about-content h2 {
     font-size: 32px;
   }
 
-  .about-text {
+  .temple-about-text {
     font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 40px;
   }
 
-  .feature-grid {
+  .temple-feature-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .feature-card {
-    padding: 20px;
-  }
-
-  .feature-icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .read-more-btn {
+  .temple-readmore-btn {
     width: 100%;
-    max-width: 300px;
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* SMALL MOBILE */
 
-@media (max-width: 576px) {
-  .about-temple {
-    padding: 50px 15px;
+@media (max-width: 480px) {
+
+  .temple-about-content h2 {
+    font-size: 26px;
   }
 
-  .about-image img {
-    border-radius: 20px;
-    border-width: 5px;
-  }
-
-  .about-content h2 {
-    font-size: 28px;
-  }
-
-  .title-divider {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .about-text {
+  .temple-about-text {
     font-size: 15px;
   }
 
-  .feature-icon {
-    width: 70px;
-    height: 70px;
+  .temple-feature-card {
+    padding: 20px;
   }
 
-  .feature-card h3 {
-    font-size: 17px;
+  .temple-feature-card h3 {
+    font-size: 18px;
   }
 
-  .feature-card p {
-    font-size: 14px;
-  }
-
-  .read-more-btn {
-    width: 100%;
-    padding: 14px 20px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 375px) {
-  .about-content h2 {
-    font-size: 24px;
-  }
-
-  .about-text {
-    font-size: 14px;
-  }
-
-  .feature-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .feature-card h3 {
-    font-size: 16px;
-  }
-
-  .feature-card p {
-    font-size: 13px;
-  }
-
-  .read-more-btn {
+  .temple-feature-card p {
     font-size: 14px;
   }
 }

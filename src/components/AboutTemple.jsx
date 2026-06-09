@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/AboutTemple.css";
-import ramImg from "../assets/about.png";
+import templeImg from "../assets/about.png";
 
 import {
   Landmark,
@@ -10,85 +10,103 @@ import {
 
 function AboutTemple() {
   return (
-    <section className="about-temple">
-
-      <div className="about-container">
+    <section className="temple-about-section">
+      <div className="temple-about-wrapper">
 
         {/* Left Image */}
-        <div className="about-image">
-          <img src={ramImg} alt="मंदिर" />
+        <div className="temple-about-image">
+          <img
+            src={templeImg}
+            alt="श्री शनि महाराज मंदिर"
+          />
         </div>
 
         {/* Right Content */}
-        <div className="about-content">
+        <div className="temple-about-content">
 
-          <h2>हमारे मंदिर के बारे में</h2>
+          <span className="temple-subtitle">
+            श्री शनि महाराज मंदिर
+          </span>
 
-          <div className="title-divider">
-            ✦
+          <h2>मंदिर का इतिहास एवं जीर्णोद्धार</h2>
+
+          <div className="temple-divider">
+            ✦ ✦ ✦
           </div>
 
-          <p className="about-text">
-            हमारा मंदिर श्रद्धा, भक्ति और आध्यात्मिक परंपराओं का
-            एक पवित्र केंद्र है। यह मंदिर वर्षों से भक्तों की
-            आस्था का प्रतीक रहा है और लाखों श्रद्धालुओं को
-            आध्यात्मिक शांति एवं प्रेरणा प्रदान करता है।
+          <p className="temple-about-text">
+            शनि मंदिर का इतिहास पूरी तरह प्रमाणित नहीं है।
+            मंदिर में स्थित शिला पर बनी मूर्ति की नक्काशी
+            हजारों वर्ष पुरानी बताई जाती है। यह मंदिर
+            श्रद्धालुओं की आस्था का प्रमुख केंद्र रहा है।
+
+            <br /><br />
+
+            विपुल कुमार चैनपुरा निवासी ने अपने माता-पिता की
+            पावन स्मृति में जर्जर अवस्था में स्थित मंदिर के
+            जीर्णोद्धार का संकल्प लिया। 01/12/2023 को
+            जीर्णोद्धार कार्य प्रारंभ किया गया जो
+            27/05/2025 को सफलतापूर्वक पूर्ण हुआ।
+            भविष्य में भी मंदिर के विकास हेतु वे
+            निरंतर तत्पर हैं।
           </p>
 
-          <div className="feature-grid">
+          <div className="temple-feature-grid">
 
-            <div className="feature-card">
-              <div className="feature-icon">
+            <div className="temple-feature-card">
+              <div className="temple-feature-icon">
                 <Landmark size={40} />
               </div>
 
               <h3>मंदिर का इतिहास</h3>
 
               <p>
-                यह मंदिर वर्षों पुराना है और
-                श्रद्धा, विश्वास तथा भक्ति का
-                एक महत्वपूर्ण प्रतीक माना जाता है।
+                शनि मंदिर का इतिहास पूरी तरह प्रमाणित नहीं है।
+                मंदिर में स्थित शिला पर बनी मूर्ति की नक्काशी
+                हजारों वर्ष पुरानी मानी जाती है।
               </p>
+
+              
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon">
+            <div className="temple-feature-card">
+              <div className="temple-feature-icon">
                 <Flower2 size={40} />
               </div>
 
-              <h3>मिशन एवं उद्देश्य</h3>
+              <h3>निर्माण ईस्वी</h3>
 
               <p>
-                हमारा उद्देश्य आध्यात्मिकता,
-                सेवा भावना और भारतीय संस्कृति
-                की परंपराओं को बढ़ावा देना है।
+                सम्बत 1876 मार्गशीर्ष शुक्ल पक्ष दशमी तिथि,
+                ईस्वी सन दिनांक 26/11/1819 दिन शुक्रवार
+                को इस मंदिर का निर्माण कराया गया।
               </p>
             </div>
 
-            <div className="feature-card">
-              <div className="feature-icon">
+            <div className="temple-feature-card">
+              <div className="temple-feature-icon">
                 <Orbit size={40} />
               </div>
 
-              <h3>आध्यात्मिक महत्व</h3>
+              <h3>जीर्णोद्धार कार्य</h3>
 
               <p>
-                यह पवित्र स्थल भक्तों के जीवन में
-                शांति, सुख, समृद्धि और सकारात्मक
-                ऊर्जा का संचार करता है।
+                विपुल कुमार चैनपुरा निवासी द्वारा अपने
+                माता-पिता की स्मृति में 01/12/2023 को
+                जीर्णोद्धार कार्य प्रारंभ किया गया जो
+                27/05/2025 को पूर्ण हुआ।
               </p>
             </div>
 
           </div>
 
-          <button className="read-more-btn">
-            और जानें
+          <button className="temple-readmore-btn">
+            मंदिर दर्शन करें
           </button>
 
         </div>
 
       </div>
-
     </section>
   );
 }

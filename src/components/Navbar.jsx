@@ -14,7 +14,7 @@ function Navbar() {
         {/* Logo */}
         <div className="logo-section">
           <FaGopuram className="temple-icon" />
-          <h2>सानिचर बाबा मंदिर</h2>
+          <h2>सनिचर बाबा मंदिर</h2>
         </div>
 
         {/* Mobile Menu Button */}

@@ -1,86 +1,96 @@
 import React from "react";
 import "../styles/ContactPage.css";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+} from "react-icons/fa";
 
-const ContactPage = () => {
+function ContactPage() {
   return (
-    <section className="contact-page">
-      {/* Header */}
-      <div className="contact-banner">
-        <h1>CONTACT US</h1>
-        <p>Home &gt; Contact</p>
-      </div>
+    <div className="contact-page">
 
-      {/* Contact Section */}
+      {/* Banner */}
+      <section className="contact-banner">
+        <h1>Contact Us</h1>
+        <p>Shanichar Baba Mandir - Get in Touch With Us</p>
+      </section>
+
+      {/* Contact Info + Map */}
       <div className="contact-container">
-        {/* Left Side */}
+
         <div className="contact-info">
+
           <div className="info-item">
-            <div className="icon">📍</div>
+            <div className="icon">
+              <FaMapMarkerAlt />
+            </div>
             <div>
-              <h4>ADDRESS</h4>
+              <h4>Temple Address</h4>
               <p>
-                123, Temple Road,
-                <br />
-                Your City, State - 000001
+               Dhaulpura, Begampur, Patna, Bihar 800009
               </p>
             </div>
           </div>
 
           <div className="info-item">
-            <div className="icon">📞</div>
+            <div className="icon">
+              <FaPhoneAlt />
+            </div>
             <div>
-              <h4>PHONE</h4>
-              <p>+91 12345 67890</p>
+              <h4>Phone Number</h4>
+              <p>+91 9876543210</p>
             </div>
           </div>
 
           <div className="info-item">
-            <div className="icon">✉️</div>
+            <div className="icon">
+              <FaEnvelope />
+            </div>
             <div>
-              <h4>EMAIL</h4>
-              <p>info@shrirammandir.com</p>
+              <h4>Email Address</h4>
+              <p>info@shanicharbabamandir.com</p>
             </div>
           </div>
 
-          <div className="info-item">
-            <div className="icon">🕒</div>
-            <div>
-              <h4>TIMINGS</h4>
-              <p>
-                4:00 AM – 1:00 PM
-                <br />
-                4:00 PM – 9:00 PM
-              </p>
-            </div>
-          </div>
         </div>
 
-        {/* Right Side */}
+        {/* Google Map */}
         <div className="map-section">
           <iframe
             title="Temple Location"
-            src="https://maps.google.com/maps?q=Ayodhya&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Chainpura,Bihar&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowFullScreen
             loading="lazy"
           ></iframe>
         </div>
+
       </div>
 
       {/* Contact Form */}
-      <div className="message-section">
-        <h3>SEND US A MESSAGE</h3>
+      <section className="message-section">
+        <h3>Send Message</h3>
 
-        <div className="form-row">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="text" placeholder="Phone Number" />
-        </div>
+        <form>
+          <div className="form-row">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="text" placeholder="Subject" />
+          </div>
 
-        <textarea rows="6" placeholder="Your Message"></textarea>
+          <textarea
+            rows="8"
+            placeholder="Write Your Message..."
+          ></textarea>
 
-        <button>SEND MESSAGE</button>
-      </div>
-    </section>
+          <button type="submit">
+            Send Message
+          </button>
+        </form>
+      </section>
+
+    </div>
   );
-};
+}
 
 export default ContactPage;

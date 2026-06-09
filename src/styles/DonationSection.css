@@ -9,45 +9,40 @@
 ========================= */
 
 .donation-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-
   background: linear-gradient(
     135deg,
     #5f0202,
     #850707,
     #5f0202
   );
-
   border-radius: 20px;
   padding: 50px 35px;
   text-align: center;
-  position: relative;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 40px rgba(0,0,0,.15);
 }
 
 .donation-container h2 {
   color: #f6d08d;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem,4vw,3rem);
   margin-bottom: 12px;
-  line-height: 1.2;
 }
 
 .donation-container p {
   color: #f5e5c9;
   font-size: 18px;
-  margin-bottom: 40px;
   line-height: 1.8;
+  margin-bottom: 40px;
 }
 
 /* =========================
-   DONATION CARDS
+   CARDS
 ========================= */
 
 .donation-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 25px;
 }
 
@@ -55,11 +50,11 @@
   background: #fff8ee;
   padding: 30px 20px;
   border-radius: 15px;
-  transition: 0.3s ease;
+  transition: .3s;
 }
 
 .donation-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 }
 
 .donation-card svg {
@@ -69,211 +64,159 @@
 
 .donation-card h3 {
   color: #6b2020;
-  font-size: 20px;
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .donation-card span {
   color: #666;
   font-size: 15px;
-  line-height: 1.6;
-  display: block;
 }
 
 /* =========================
-   BUTTON
+   CALENDAR
 ========================= */
 
-.donate-now-btn {
-  margin-top: 40px;
+.calendar-section {
+  margin-top: 60px;
+}
 
-  background: transparent;
-  border: 2px solid #d6a24c;
+.calendar-section h3 {
+  color: #f6d08d;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-  color: #fff;
+.calendar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 550px;
+  border: none !important;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff8ee;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.react-calendar__navigation {
+  margin-bottom: 15px;
+}
+
+.react-calendar__navigation button {
+  color: #6b2020;
+  font-size: 18px;
   font-weight: 600;
-  font-size: 15px;
+}
 
-  padding: 14px 40px;
+.react-calendar__month-view__weekdays {
+  color: #850707;
+  font-weight: 600;
+}
+
+.react-calendar__tile {
+  padding: 15px 0;
   border-radius: 10px;
-
-  cursor: pointer;
-  transition: 0.3s ease;
+  transition: .3s;
 }
 
-.donate-now-btn:hover {
-  background: #d6a24c;
-  color: #5f0202;
+.react-calendar__tile:hover {
+  background: #f3d8aa !important;
 }
 
-/* =========================
-   LARGE DESKTOP
-========================= */
+.react-calendar__tile--active {
+  background: #850707 !important;
+  color: #fff !important;
+}
 
-@media (min-width: 1600px) {
-  .donation-container {
-    max-width: 1400px;
-    padding: 70px 50px;
-  }
+.react-calendar__tile--now {
+  background: #f6d08d !important;
+  color: #5f0202 !important;
+}
 
-  .donation-cards {
-    gap: 35px;
-  }
+.selected-date {
+  margin-top: 25px;
+  color: #fff;
+  font-size: 18px;
+}
 
-  .donation-card {
-    padding: 40px 30px;
-  }
-
-  .donation-card h3 {
-    font-size: 24px;
-  }
-
-  .donation-card span {
-    font-size: 17px;
-  }
+.selected-date strong {
+  color: #f6d08d;
 }
 
 /* =========================
-   LAPTOP
-========================= */
-
-@media (max-width: 1200px) {
-  .donation-container {
-    padding: 45px 25px;
-  }
-
-  .donation-cards {
-    gap: 20px;
-  }
-}
-
-/* =========================
-   TABLET LANDSCAPE
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 992px) {
-  .donation-section {
-    padding: 20px 5% 70px;
-  }
 
   .donation-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .donation-container p {
-    font-size: 16px;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 768px) {
-  .donation-section {
-    padding: 20px 20px 60px;
-  }
 
   .donation-container {
     padding: 40px 20px;
-    border-radius: 18px;
   }
 
   .donation-cards {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .donation-card {
-    padding: 25px 20px;
+  .calendar-section h3 {
+    font-size: 26px;
   }
 
-  .donation-card h3 {
-    font-size: 18px;
-  }
-
-  .donation-card span {
-    font-size: 14px;
-  }
-
-  .donate-now-btn {
-    width: 100%;
-    max-width: 300px;
+  .react-calendar {
+    padding: 10px;
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 576px) {
+
   .donation-section {
-    padding: 20px 15px 50px;
+    padding: 15px;
   }
 
   .donation-container {
-    padding: 35px 15px;
-    border-radius: 15px;
+    padding: 30px 15px;
   }
 
   .donation-container p {
     font-size: 15px;
-    margin-bottom: 30px;
   }
 
-  .donation-card {
-    padding: 22px 15px;
+  .calendar-section h3 {
+    font-size: 22px;
   }
 
-  .donation-card h3 {
-    font-size: 17px;
+  .selected-date {
+    font-size: 15px;
   }
 
-  .donation-card span {
-    font-size: 14px;
-  }
-
-  .donate-now-btn {
-    width: 100%;
-    padding: 14px 20px;
-    font-size: 14px;
+  .react-calendar__tile {
+    padding: 10px 0;
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 375px) {
-  .donation-section {
-    padding: 15px 12px 40px;
-  }
-
-  .donation-container {
-    padding: 30px 12px;
-  }
 
   .donation-container h2 {
     font-size: 24px;
   }
 
-  .donation-container p {
-    font-size: 14px;
+  .calendar-section h3 {
+    font-size: 20px;
   }
 
-  .donation-card {
-    padding: 20px 12px;
-  }
-
-  .donation-card h3 {
-    font-size: 16px;
-  }
-
-  .donation-card span {
-    font-size: 13px;
-  }
-
-  .donate-now-btn {
+  .react-calendar {
     font-size: 13px;
   }
 }

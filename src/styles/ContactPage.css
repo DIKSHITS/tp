@@ -17,8 +17,7 @@
 
 .contact-banner {
   background: linear-gradient(
-      rgba(90, 20, 0, 0.85),
-      rgba(90, 20, 0, 0.85)
+       rgba(15, 15, 15, 0.75)
     ),
     url("https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=1200");
 
@@ -74,7 +73,7 @@
   width: 55px;
   height: 55px;
   background: #fff;
-  color: #9b4b0b;
+  color:  rgba(15, 15, 15, 0.75);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -85,12 +84,12 @@
 }
 
 .info-item h4 {
-  color: #8b4513;
+  color:  rgba(15, 15, 15, 0.75);
   margin-bottom: 5px;
 }
 
 .info-item p {
-  color: #555;
+  color:  rgba(15, 15, 15, 0.75);
   line-height: 1.7;
   font-size: 14px;
 }
@@ -115,7 +114,7 @@
 
 .message-section h3 {
   text-align: center;
-  color: #8b4513;
+  color:  rgba(15, 15, 15, 0.75);
   margin-bottom: 30px;
   font-size: 30px;
 }
@@ -147,7 +146,7 @@
 .message-section button {
   display: block;
   margin: 25px auto 0;
-  background: #7a0000;
+  background:  rgba(15, 15, 15, 0.75);
   color: #fff;
   border: none;
   padding: 15px 40px;

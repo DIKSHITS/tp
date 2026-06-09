@@ -11,12 +11,7 @@
 .donation-container {
   max-width: 1200px;
   margin: auto;
-  background: linear-gradient(
-    135deg,
-    #5f0202,
-    #850707,
-    #5f0202
-  );
+ background: rgba(15, 15, 15, 0.75);
   border-radius: 20px;
   padding: 50px 35px;
   text-align: center;

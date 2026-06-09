@@ -18,7 +18,7 @@
 }
 
 .section-title h2 {
-  color: #6b2b2b;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: 1px;
@@ -28,7 +28,7 @@
 .line {
   width: 80px;
   height: 2px;
-  background: #d5a65b;
+  background:  rgba(15, 15, 15, 0.75);
   flex-shrink: 0;
 }
 
@@ -84,7 +84,7 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #fff7eb;
+  background:  rgba(15, 15, 15, 0.75);
   border: 2px solid #ead3aa;
   display: flex;
   align-items: center;
@@ -96,7 +96,7 @@
 }
 
 .card-content h3 {
-  color: #6b2b2b;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 20px;
   margin-bottom: 12px;
 }

@@ -11,10 +11,7 @@
 .page-banner {
   position: relative;
   background: linear-gradient(
-    135deg,
-    #4b0000,
-    #7b0909,
-    #4b0000
+    rgba(15, 15, 15, 0.75)
   );
   padding: 130px 20px 100px;
   text-align: center;
@@ -120,7 +117,7 @@
   display: inline-block;
   width: fit-content;
   background: #fff4df;
-  color: #b17c16;
+  color:  rgba(15, 15, 15, 0.75);
   padding: 10px 20px;
   border-radius: 30px;
   margin-bottom: 20px;
@@ -128,7 +125,7 @@
 }
 
 .about-info h2 {
-  color: #6b2020;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: clamp(2rem, 4vw, 3.5rem);
   margin-bottom: 15px;
   line-height: 1.2;
@@ -137,13 +134,13 @@
 .gold-divider {
   width: 90px;
   height: 4px;
-  background: #d4af37;
+  background:  rgba(15, 15, 15, 0.75);
   border-radius: 10px;
   margin-bottom: 25px;
 }
 
 .main-desc {
-  color: #555;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 17px;
   line-height: 1.9;
   margin-bottom: 18px;
@@ -175,13 +172,13 @@
 }
 
 .stat-card h3 {
-  color: #6b2020;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 34px;
   margin-bottom: 8px;
 }
 
 .stat-card span {
-  color: #666;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 14px;
 }
 
@@ -216,13 +213,13 @@
 }
 
 .feature-item h3 {
-  color: #6b2020;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 22px;
   margin-bottom: 8px;
 }
 
 .feature-item p {
-  color: #666;
+  color:  rgba(15, 15, 15, 0.75);
   line-height: 1.8;
   margin: 0;
 }

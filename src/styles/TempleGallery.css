@@ -18,7 +18,7 @@
 }
 
 .gallery-title h2 {
-  color: #6d2b2b;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   text-align: center;
@@ -27,7 +27,7 @@
 .gallery-line {
   width: 80px;
   height: 2px;
-  background: #d8a24f;
+  background:  rgba(15, 15, 15, 0.75);
   flex-shrink: 0;
 }
 
@@ -87,9 +87,7 @@
   font-size: 15px;
 
   background: linear-gradient(
-    135deg,
-    #730b0b,
-    #a11616
+    rgba(15, 15, 15, 0.75)
   );
 
   transition: 0.3s ease;

@@ -55,7 +55,7 @@
 
 .section-tag {
   display: inline-block;
-  color: #c89b47;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -65,14 +65,14 @@
 
 .renovation-container h2 {
   font-size: 48px;
-  color: #7f1111;
+  color:  rgba(15, 15, 15, 0.75);
   margin-bottom: 20px;
 }
 
 .renovation-container p {
   max-width: 1000px;
   margin: auto;
-  color: #555;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 20px;
   line-height: 1.8;
 }

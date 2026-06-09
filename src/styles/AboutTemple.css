@@ -39,7 +39,7 @@
 }
 
 .temple-subtitle {
-  color: #c89b47;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -47,7 +47,7 @@
 }
 
 .temple-about-content h2 {
-  color: #5d1d1d;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 48px;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -56,13 +56,13 @@
 }
 
 .temple-divider {
-  color: #c89b47;
+  color:  rgba(15, 15, 15, 0.75);
   font-size: 26px;
   margin-bottom: 25px;
 }
 
 .temple-about-text {
-  color: #555;
+  color:  rgba(15, 15, 15, 0.75);
   line-height: 1.9;
   font-size: 18px;
   margin-bottom: 45px;
@@ -105,13 +105,13 @@
 }
 
 .temple-feature-card h3 {
-  color: #6b2424;
+  color:  rgba(15, 15, 15, 0.75);
   margin-bottom: 15px;
   font-size: 20px;
 }
 
 .temple-feature-card p {
-  color: #666;
+  color:  rgba(15, 15, 15, 0.75);
   line-height: 1.8;
   font-size: 15px;
 }
@@ -121,9 +121,7 @@
 .temple-readmore-btn {
   margin-top: 40px;
   background: linear-gradient(
-    135deg,
-    #6f0909,
-    #a31212
+   rgba(15, 15, 15, 0.75)
   );
   color: #fff;
   border: none;

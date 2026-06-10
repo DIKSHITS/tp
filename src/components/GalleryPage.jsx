@@ -6,6 +6,15 @@ import gallery2 from "../assets/gallery2.jpg";
 import gallery3 from "../assets/gallery3.jpg";
 import gallery4 from "../assets/gallery4.jpg";
 import gallery5 from "../assets/gallery5.jpg";
+import gallery6 from "../assets/gallery6.jpg";
+import gallery7 from "../assets/gallery7.jpg";
+import gallery8 from "../assets/gallery8.jpg";
+import gallery9 from "../assets/gallery9.jpg";
+import gallery10 from "../assets/gallery10.jpg";
+import gallery11 from "../assets/gallery11.jpg";
+import gallery12 from "../assets/gallery12.jpg";
+import gallery13 from "../assets/gallery13.jpg";
+import gallery14 from "../assets/gallery14.jpg";
 
 function GalleryPage() {
   const [activeTab, setActiveTab] = useState("all");
@@ -16,7 +25,15 @@ function GalleryPage() {
     { image: gallery3, category: "aarti" },
     { image: gallery4, category: "temple" },
     { image: gallery5, category: "event" },
-    
+    { image: gallery6, category: "festival" },
+    { image: gallery7, category: "temple" },
+    { image: gallery8, category: "aarti" },
+    { image: gallery9, category: "event" },
+    { image: gallery10, category: "temple" },
+    { image: gallery11, category: "festival" },
+    { image: gallery12, category: "aarti" },
+    { image: gallery13, category: "event" },
+    { image: gallery14, category: "temple" },
   ];
 
   const filteredImages =
@@ -78,15 +95,12 @@ function GalleryPage() {
         </div>
 
         {/* Gallery Grid */}
-
         <div className="gallery-grid">
-
           {filteredImages.map((item, index) => (
             <div className="gallery-card" key={index}>
-              <img src={item.image} alt="Temple Gallery" />
+              <img src={item.image} alt={`Gallery ${index + 1}`} />
             </div>
           ))}
-
         </div>
 
       </section>

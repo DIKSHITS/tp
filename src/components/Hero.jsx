@@ -1,21 +1,39 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Hero.css";
-import heroBg from "../assets/hero.png";
+
+import hero from "../assets/hero.png";
+import hero1 from "../assets/hero1.png";
+
+const heroImages = [hero, hero1];
 
 function Hero() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) =>
+        prev === heroImages.length - 1 ? 0 : prev + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [currentImage]);
+
   return (
     <>
       <section
         className="hero"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{
+          backgroundImage: `url(${heroImages[currentImage]})`,
+        }}
       >
         <div className="hero-overlay"></div>
+
         <div className="curve-divider"></div>
       </section>
 
       <section className="renovation-section">
         <div className="renovation-container">
-
           <span className="section-tag">
             श्री शनि महाराज मंदिर
           </span>
@@ -30,10 +48,14 @@ function Hero() {
             वर्तमान में भी मंदिर के विकास, संरक्षण एवं भक्तों की सुविधाओं
             के लिए निरंतर तत्पर हैं।
           </p>
-          <br></br>
-          <p>शनि मंदिर का इतिहास पूरी तरह प्रमाणित नहीं होता मंदिर मे इस्तिथ शिला मे जो मूर्ति की नक्काशी वो हज़ारो वर्ष पुरानी बताई जाती है 
-      ये शनि मंदिर के निचे लिखा रहेगा</p>
 
+          <br />
+
+          <p>
+            शनि मंदिर का इतिहास पूरी तरह प्रमाणित नहीं होता। मंदिर में
+            स्थित शिला में जो मूर्ति की नक्काशी है वह हजारों वर्ष पुरानी
+            बताई जाती है।
+          </p>
         </div>
       </section>
     </>

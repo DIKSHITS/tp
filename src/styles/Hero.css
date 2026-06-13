@@ -1,35 +1,39 @@
 /* =========================
-   HERO
+   HERO SECTION
 ========================= */
 
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 
-  transition: background-image 1.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
 }
 
+/* Dark Overlay */
+
 .hero::before {
   content: "";
-
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.55)
-    );
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.6)
+  );
 
   z-index: 1;
 }
+
+/* Golden Glow */
 
 .hero::after {
   content: "";
@@ -39,22 +43,17 @@
   width: 700px;
   height: 700px;
 
-  background:
-    radial-gradient(
-      rgba(212,175,55,0.15),
-      transparent 70%
-    );
-
   top: -250px;
   right: -150px;
 
-  animation: floatGlow 8s infinite ease-in-out;
-}
+  background: radial-gradient(
+    rgba(212, 175, 55, 0.15),
+    transparent 70%
+  );
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+  animation: floatGlow 8s infinite ease-in-out;
+
+  z-index: 2;
 }
 
 /* =========================
@@ -62,50 +61,45 @@
 ========================= */
 
 .hero-content {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  text-align: center;
-
+  position: relative;
   z-index: 5;
 
   width: 90%;
-}
+  max-width: 1200px;
 
-.hero-content span {
-  color: #f7d47a;
-  font-size: 18px;
-  letter-spacing: 3px;
+  margin: auto;
+  text-align: center;
+
+  padding: 20px;
 }
 
 .hero-content h1 {
-  color: white;
+  color: #fff;
 
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2rem, 6vw, 5.5rem);
 
   font-weight: 800;
+  line-height: 1.15;
 
-  margin: 20px 0;
+  margin-bottom: 20px;
 
-  text-shadow:
-    0 5px 20px rgba(0,0,0,.5);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 
   animation: fadeUp 1s ease;
 }
 
 .hero-content p {
-  color: white;
-  font-size: 22px;
-  letter-spacing: 2px;
+  color: #fff;
+
+  font-size: clamp(1rem, 2vw, 1.6rem);
+
+  line-height: 1.6;
+
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* =========================
-   SCROLL DOWN
-========================= */
+/* Scroll Icon */
 
 .hero-content::after {
   content: "⌄";
@@ -113,34 +107,15 @@
   position: absolute;
 
   left: 50%;
-  bottom: -100px;
+  bottom: -80px;
 
   transform: translateX(-50%);
 
   color: white;
-  font-size: 40px;
+
+  font-size: 2.2rem;
 
   animation: bounce 2s infinite;
-}
-
-/* =========================
-   CURVE
-========================= */
-
-.curve-divider {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-
-  width: 100%;
-  height: 140px;
-
-  background: white;
-
-  border-top-left-radius: 50% 100px;
-  border-top-right-radius: 50% 100px;
-
-  z-index: 10;
 }
 
 /* =========================
@@ -148,8 +123,8 @@
 ========================= */
 
 .renovation-section {
+  padding: 80px 20px;
   background: #fff;
-  padding: 100px 20px;
 }
 
 .renovation-container {
@@ -160,29 +135,34 @@
 
 .section-tag {
   color: #b8860b;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .renovation-container h2 {
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 3rem);
+
   color: #222;
+
   margin: 15px 0 25px;
 }
 
 .renovation-container p {
   max-width: 1000px;
+
   margin: auto;
 
   color: #555;
 
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+
   line-height: 1.9;
 }
 
 /* =========================
-   ANIMATIONS
+   ANIMATION
 ========================= */
 
 @keyframes fadeUp {
@@ -212,12 +192,31 @@
 }
 
 @keyframes bounce {
-  0%,100% {
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
 
   50% {
-    transform: translateX(-50%) translateY(15px);
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    width: 95%;
+  }
+
+  .hero-content::after {
+    bottom: -70px;
   }
 }
 
@@ -227,26 +226,53 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 70vh;
+    min-height: 100vh;
+    background-position: center;
+  }
+
+  .hero-content {
+    width: 95%;
+    padding: 10px;
   }
 
   .hero-content h1 {
-    font-size: 38px;
+    font-size: 2.3rem;
+    line-height: 1.2;
   }
 
   .hero-content p {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
-  .curve-divider {
-    height: 80px;
+  .hero-content::after {
+    bottom: -60px;
+    font-size: 1.8rem;
   }
 
-  .renovation-container h2 {
-    font-size: 30px;
+  .renovation-section {
+    padding: 60px 15px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-content::after {
+    display: none;
   }
 
   .renovation-container p {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.8;
   }
 }
